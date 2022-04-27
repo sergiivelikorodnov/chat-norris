@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classes from "./Chats.module.scss";
 import { KeyboardEvent } from "react";
 import SearchOutlined from "@ant-design/icons/lib/icons/SearchOutlined";
@@ -8,6 +8,8 @@ import { UserType } from "types/users";
 import CheckCircleOutlined from "@ant-design/icons/lib/icons/CheckCircleOutlined";
 import { motion } from "framer-motion";
 import { backDrop } from "consts";
+import { useSelector } from "react-redux";
+import { getMessages } from "store/messageSlice/selectors";
 
 type userChatsProps = {
   setUserChat: (arg: UserType) => void;
@@ -17,6 +19,16 @@ type userChatsProps = {
 function Chats({ setUserChat, userChat }: userChatsProps): JSX.Element {
   const textInput = useRef<HTMLInputElement>(null);
   const [searchUsers, setSearchUsers] = useState(usersMock);
+  const messages = useSelector(getMessages);
+
+  const lastRoomChat = messages[messages.length - 1].userMessage.chatRoom;
+  const [lastUser] = searchUsers.filter((user) => user.id === lastRoomChat);
+  const newUsers = searchUsers.filter((user) => user !== lastUser);
+  const newOrder = [lastUser, ...newUsers];
+
+  useEffect(() => {
+    setSearchUsers(newOrder);
+  }, [lastRoomChat]);
 
   function handleClick(): void {
     if (textInput && textInput.current) {
@@ -72,6 +84,7 @@ function Chats({ setUserChat, userChat }: userChatsProps): JSX.Element {
               user={user}
               setUserChat={setUserChat}
               userChat={userChat}
+              messages={messages}
             />
           ))}
         </motion.ul>

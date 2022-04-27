@@ -6,16 +6,24 @@ import cn from "classnames";
 import { getMessages } from "store/messageSlice/selectors";
 import dayjs from "dayjs";
 import CheckCircleOutlined from "@ant-design/icons/lib/icons/CheckCircleOutlined";
+import { ChatRoomStateType } from "types/state";
+import { AnimatePresence, motion } from "framer-motion";
+import { backDrop } from "consts";
 
 type ChatProps = {
   user: UserType;
   setUserChat: (arg: UserType) => void;
   userChat: UserType;
+  messages: ChatRoomStateType;
 };
 
-function ChatItem({ user, setUserChat, userChat }: ChatProps): JSX.Element {
+function ChatItem({
+  user,
+  setUserChat,
+  userChat,
+  messages,
+}: ChatProps): JSX.Element {
   const mainCn = cn(classes.chat_list_item, classes.chat_list_item_active);
-  const messages = useSelector(getMessages);
   const chatRoomMessages = messages.filter(
     (message) => message.userMessage.user.id === user.id
   );

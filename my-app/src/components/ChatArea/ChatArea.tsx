@@ -56,7 +56,7 @@ function ChatArea({ userChat }: ChatProps): JSX.Element {
         setTimeout(() => {
           dispatch(addMessage({ id: userChat.id, comment, user: userChat }));
           scrollToMyRef();
-        }, randomTimeInterval(8000, 12000));
+        }, randomTimeInterval(3000, 5000));
       })
       .catch((err) => toast.success(err));
   };
