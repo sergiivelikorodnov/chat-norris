@@ -1,0 +1,59 @@
+.message{
+    color: var(--bg-white);
+    background-color: var(--primary-dark);
+    padding: 15px 20px 15px 20px;
+    border-radius: 30px;
+    width: fit-content;
+    font-family: var(--family);
+    margin-left: 10px;
+}
+
+.message_reply{
+    display: flex;
+    // align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex-direction: column;
+}
+
+.comment{
+    display: flex;
+}
+
+.date{
+    padding: 10px;
+    padding-left: 70px;
+    font-size: 12px;
+    color: var(--secondary-grey);
+    font-family: var(--family);
+}
+
+.message_reply_my{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+
+    .message{
+        color: var(--secondary-grey);
+        background-color: var(--bg-grey);
+        padding: 15px 20px 15px 20px;
+        border-radius: 30px;
+        width: fit-content;
+        font-family: var(--family);
+        margin-left: 10px;
+    }
+
+    .avatar{
+        display: none;
+    }
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}

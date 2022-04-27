@@ -1,0 +1,52 @@
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--bg-grey);
+    border-right: 1px solid var(--secondary);
+    height: 100vh;
+}
+
+.top_container{
+    padding: 25px;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.form__input{
+    border-radius: var(--radii-sm);
+    border:1px solid var(--secondary);
+    height: 32px;
+    padding: 10px;
+    width: 100%;
+    padding-left: 35px;
+}
+
+.form__fieldset{
+    position: relative;
+}
+
+.search_icon{
+    border: none;
+    background-color: var(--bg-white);
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    font-size: 12px;
+    color:var(--primary-dark);
+}
+
+.chats_container{
+    border-top: 1px solid var(--secondary);
+    overflow: auto;
+    background-color: var(--bg-white);
+}
+
+.chats_title{
+    padding: 25px;
+}
+

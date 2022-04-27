@@ -1,0 +1,49 @@
+.chat_list_item{
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 6px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    border-bottom: 1px solid var(--secondary);
+    cursor: pointer;
+}
+
+.chat_list_item_active{
+    background-color: var(--bg-grey);
+}
+
+.chat_list_avatar{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.chat_list_user{
+    display: inline-block;
+}
+
+.chat_list_user_title{
+    font-family: var(--family);
+    color: var(--primary-dark);
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.chat_list_user_message{
+    font-family: var(--family);
+    color: var(--secondary-grey);
+    font-size: 13px;
+}
+
+.chat_list_date{
+    padding-right: 25px;
+    font-size: 12px;
+    font-family: var(--family);
+    padding-top: 5px;
+
+    @media (max-width: 768px) {
+        display: none;
+      }
+}
