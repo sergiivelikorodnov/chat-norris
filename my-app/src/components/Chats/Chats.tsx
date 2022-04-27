@@ -21,7 +21,10 @@ function Chats({ setUserChat, userChat }: userChatsProps): JSX.Element {
   const [searchUsers, setSearchUsers] = useState(usersMock);
   const messages = useSelector(getMessages);
 
-  const lastRoomChat = messages[messages.length - 1].userMessage.chatRoom;
+  let lastRoomChat: number;
+  messages.length === 0
+    ? (lastRoomChat = 1)
+    : (lastRoomChat = messages[messages.length - 1].userMessage.chatRoom);
   const [lastUser] = searchUsers.filter((user) => user.id === lastRoomChat);
   const newUsers = searchUsers.filter((user) => user !== lastUser);
   const newOrder = [lastUser, ...newUsers];
