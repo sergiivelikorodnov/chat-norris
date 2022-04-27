@@ -1,18 +1,18 @@
-import { UserType } from 'types/users';
+import { UserType } from "types/users";
 import { getActiveUser } from "./../activeUserSlice/selectors";
 import { useSelector } from "react-redux";
 import { emptyUser, myUser, usersMock } from "mocks/usersMock";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ChatRoomStateType, MessageType } from "types/state";
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
 
 const initialState: ChatRoomStateType = [];
 
 type Message = {
-  id: number,
-  comment: string,
-  user:UserType
-}
+  id: number;
+  comment: string;
+  user: UserType;
+};
 
 const messagesSlice = createSlice({
   name: "message",

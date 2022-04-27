@@ -1,11 +1,11 @@
-.container{
+.container {
     display: grid;
     grid-template-rows: 70px auto 100px;
     overflow: hidden;
     height: 100vh;
 }
 
-.top_container{
+.top_container {
     display: flex;
     padding: 15px;
     align-items: center;
@@ -13,22 +13,22 @@
     border-bottom: 1px solid var(--secondary);
 }
 
-.middle_container{
+.middle_container {
     padding: 15px 10px 15px 10px;
     overflow: auto;
     position: relative;
 }
 
-.bottom_container{
+.bottom_container {
     background-color: var(--bg-grey);
     padding: 25px;
     position: relative;
     border-top: 1px solid var(--secondary);
 }
 
-.form__input{
+.form__input {
     border-radius: var(--radii-sm);
-    border:1px solid var(--secondary);
+    border: 1px solid var(--secondary);
     height: 50px;
     padding: 10px;
     width: 100%;
@@ -38,7 +38,7 @@
     font-family: var(--family);
 }
 
-.send_icon{
+.send_icon {
     position: absolute;
     color: var(--secondary-grey);
     font-size: 20px;
@@ -49,17 +49,17 @@
     cursor: pointer;
 }
 
-.avatar{
+.avatar {
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-.title{
+.title {
     font-size: 20px;
 }
 
-.messages_list{
+.messages_list {
     bottom: 0;
     width: 97.5%;
 }

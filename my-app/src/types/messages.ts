@@ -1,3 +1,3 @@
 export type ChuckNorrisType = {
-    value : string
-}
+  value: string;
+};

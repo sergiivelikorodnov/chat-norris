@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
-function PageWrapper():JSX.Element {
+function PageWrapper(): JSX.Element {
   return (
     <>
       <Outlet />

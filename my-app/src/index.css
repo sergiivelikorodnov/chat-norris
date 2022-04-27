@@ -45,7 +45,7 @@ code {
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
-h1{
+h1 {
   font-size: 24px;
   color: var(--primary-blue);
   font-weight: var(--fw-normal);
@@ -53,20 +53,20 @@ h1{
   margin: auto;
 }
 
-p, ul{
+p, ul {
   margin: 0;
   padding: 0;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-.avatar_container{
+.avatar_container {
   position: relative;
 }
 
-.online{
+.online {
   color: green;
   position: absolute;
   left: 35px;
@@ -75,6 +75,8 @@ ul{
 
 
 ::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-  background: transparent; /* Optional: just make scrollbar invisible */
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
 }

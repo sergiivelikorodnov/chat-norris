@@ -1,5 +1,4 @@
-import { StoreNameSpace } from '../rootReducer';
-import { State } from '../../types/state';
+import { StoreNameSpace } from "../rootReducer";
+import { State } from "../../types/state";
 
-export const getMessages = (state: State) =>
-  state[StoreNameSpace.Messages];
+export const getMessages = (state: State) => state[StoreNameSpace.Messages];

@@ -37,7 +37,7 @@ function Login(): JSX.Element {
   return (
     <div className={classes.login_page}>
       <div className={classes.login_card}>
-        <h2>Welcome to Chuck Norris Chat!</h2>
+        <h2>Welcome to Chat Norris Chat!</h2>
 
         <div className={googleCn} onClick={signInWithGoogle}>
           <GoogleOutlined /> Sign In with Google
