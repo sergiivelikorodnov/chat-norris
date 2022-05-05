@@ -62,7 +62,7 @@ function ChatArea({ userChat }: ChatProps): JSX.Element {
   };
 
   function handleClick(): void {
-    if (textInput && textInput.current) {
+    if (textInput && textInput.current && textInput.current.value !== "") {
       const comment = textInput.current.value;
       dispatch(addMessage({ id: userChat.id, comment, user: myUser }));
       textInput.current.value = "";
