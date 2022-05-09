@@ -15,6 +15,7 @@ import { chuckReply } from "consts";
 import { toast } from "react-toastify";
 import { randomTimeInterval } from "service/utils";
 import CheckCircleOutlined from "@ant-design/icons/lib/icons/CheckCircleOutlined";
+import Avatar from "components/Avatar/Avatar";
 
 type ChatProps = {
   userChat: UserType;
@@ -86,7 +87,8 @@ function ChatArea({ userChat }: ChatProps): JSX.Element {
       ) : (
         <div className={classes.container}>
           <div className={classes.top_container}>
-            <div className="avatar_container">
+            <Avatar avatarImage={userChat.avatar} />
+            {/* <div className="avatar_container">
               <CheckCircleOutlined className="online" />
               <img
                 className={classes.avatar}
@@ -95,7 +97,7 @@ function ChatArea({ userChat }: ChatProps): JSX.Element {
                 height="50"
                 alt=""
               />
-            </div>
+            </div> */}
             <p className={classes.title}>{userChat.name}</p>
           </div>
           <div className={classes.middle_container} ref={chatContainer}>

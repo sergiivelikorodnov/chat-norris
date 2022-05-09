@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import classes from "./Chats.module.scss";
 import SearchOutlined from "@ant-design/icons/lib/icons/SearchOutlined";
 import ChatItem from "components/ChatItem/ChatItem";
@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { backDrop } from "consts";
 import { useSelector } from "react-redux";
 import { getMessages } from "store/messageSlice/selectors";
+import Avatar from "components/Avatar/Avatar";
 
 type userChatsProps = {
   setUserChat: (arg: UserType) => void;
@@ -45,32 +46,28 @@ function Chats({ setUserChat, userChat }: userChatsProps): JSX.Element {
   return (
     <div className={classes.container}>
       <div className={classes.top_container}>
-        <div className="avatar_container">
-          <CheckCircleOutlined className="online" />
-          <img
-            className={classes.avatar}
-            src="img/avatar.jpg"
-            width="50"
-            height="50"
-            alt=""
-          />
-        </div>
-        <div className={classes.form__fieldset}>
-          <button className={classes.search_icon} onClick={handleClick}>
-            <SearchOutlined />
-          </button>
-          <input
-            className={classes.form__input}
-            id="form-search"
-            type="search"
-            name="form-search"
-            placeholder="Search or start new chat"
-            required
-            ref={textInput}
-            defaultValue=""
-            onInput={handleClick}
-          />
-        </div>
+        <Avatar avatarImage="img/avatar.jpg" />
+        {useMemo(
+          () => (
+            <div className={classes.form__fieldset}>
+              <button className={classes.search_icon} onClick={handleClick}>
+                <SearchOutlined />
+              </button>
+              <input
+                className={classes.form__input}
+                id="form-search"
+                type="search"
+                name="form-search"
+                placeholder="Search or start new chat"
+                required
+                ref={textInput}
+                defaultValue=""
+                onInput={handleClick}
+              />
+            </div>
+          ),
+          [textInput]
+        )}
       </div>
       <div className={classes.chats_container}>
         <h1 className={classes.chats_title}>Chats</h1>
