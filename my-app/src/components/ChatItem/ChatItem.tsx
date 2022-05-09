@@ -6,6 +6,7 @@ import cn from "classnames";
 import dayjs from "dayjs";
 import CheckCircleOutlined from "@ant-design/icons/lib/icons/CheckCircleOutlined";
 import { ChatRoomStateType } from "types/state";
+import Avatar from "components/Avatar/Avatar";
 
 type ChatProps = {
   user: UserType;
@@ -47,16 +48,7 @@ function ChatItem({
         dispatch(setActiveUser(user));
       }}
     >
-      <div className="avatar_container">
-        <CheckCircleOutlined className="online" />
-        <img
-          className={classes.chat_list_avatar}
-          src={avatar}
-          width="50"
-          height="50"
-          alt=""
-        />
-      </div>
+      <Avatar avatarImage={avatar} />
       <div className={classes.chat_list_user}>
         <p className={classes.chat_list_user_title}>{name}</p>
         <p className={classes.chat_list_user_message}>{lastComment}</p>
