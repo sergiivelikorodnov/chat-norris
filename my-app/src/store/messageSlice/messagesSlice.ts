@@ -1,7 +1,4 @@
 import { UserType } from "types/users";
-import { getActiveUser } from "./../activeUserSlice/selectors";
-import { useSelector } from "react-redux";
-import { emptyUser, myUser, usersMock } from "mocks/usersMock";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ChatRoomStateType, MessageType } from "types/state";
 import dayjs from "dayjs";

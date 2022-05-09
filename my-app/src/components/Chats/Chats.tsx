@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import classes from "./Chats.module.scss";
-import { KeyboardEvent } from "react";
 import SearchOutlined from "@ant-design/icons/lib/icons/SearchOutlined";
 import ChatItem from "components/ChatItem/ChatItem";
-import { emptyUser, usersMock } from "mocks/usersMock";
+import { usersMock } from "mocks/usersMock";
 import { UserType } from "types/users";
 import CheckCircleOutlined from "@ant-design/icons/lib/icons/CheckCircleOutlined";
 import { motion } from "framer-motion";

@@ -1,14 +1,11 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setActiveUser } from "store/activeUserSlice/activeUserSlice";
 import { UserType } from "types/users";
 import classes from "./ChatItem.module.scss";
 import cn from "classnames";
-import { getMessages } from "store/messageSlice/selectors";
 import dayjs from "dayjs";
 import CheckCircleOutlined from "@ant-design/icons/lib/icons/CheckCircleOutlined";
 import { ChatRoomStateType } from "types/state";
-import { AnimatePresence, motion } from "framer-motion";
-import { backDrop } from "consts";
 
 type ChatProps = {
   user: UserType;

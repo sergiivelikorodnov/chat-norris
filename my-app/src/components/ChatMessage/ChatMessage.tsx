@@ -1,8 +1,4 @@
-import { useRef } from "react";
 import classes from "./ChatMessage.module.scss";
-import { KeyboardEvent } from "react";
-import SendOutlined from "@ant-design/icons/lib/icons/SendOutlined";
-import { UserType } from "types/users";
 import { MessageType } from "types/state";
 import dayjs from "dayjs";
 import { motion } from "framer-motion";

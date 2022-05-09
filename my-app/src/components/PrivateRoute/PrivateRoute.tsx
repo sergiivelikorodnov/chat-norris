@@ -1,7 +1,5 @@
 import Login from "components/Login/Login";
 import { useAuth } from "contexts/AuthContext";
-import { useSelector } from "react-redux";
-import { getActiveUser } from "store/activeUserSlice/selectors";
 
 type PrivateRouteProps = {
   children: JSX.Element;
